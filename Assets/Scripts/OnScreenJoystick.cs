@@ -10,6 +10,7 @@ public class OnScreenJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler
     public Image Stick;
 
     public Vector2 JoystickAxis = Vector2.zero;
+    public bool fingerOnJoystick = false;
 
     public void OnDrag(PointerEventData eventData)
     {
@@ -18,6 +19,7 @@ public class OnScreenJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler
         //just a raycast in UI form
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(JoystickParent.rectTransform, eventData.position, eventData.pressEventCamera, out locPos))
         {
+            fingerOnJoystick = true;
             float half_w = JoystickParent.rectTransform.rect.width / 2;
             float half_h = JoystickParent.rectTransform.rect.height / 2;
 
@@ -40,6 +42,7 @@ public class OnScreenJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        fingerOnJoystick = false;
         JoystickAxis = Vector2.zero;
         Stick.rectTransform.localPosition = Vector2.zero;
     }

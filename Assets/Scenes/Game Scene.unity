@@ -1445,6 +1445,7 @@ MonoBehaviour:
   JoystickParent: {fileID: 806666790}
   Stick: {fileID: 600949155}
   JoystickAxis: {x: 0, y: 0}
+  fingerOnJoystick: 0
 --- !u!114 &806666790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2994,6 +2995,7 @@ MonoBehaviour:
   isDragging: 0
   startTouch: {x: 0, y: 0}
   swipeDelta: {x: 0, y: 0}
+  joystick: {fileID: 806666789}
 --- !u!114 &1799511784
 MonoBehaviour:
   m_ObjectHideFlags: 0
