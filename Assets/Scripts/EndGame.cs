@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class EndGame : MonoBehaviour
 {
-    [SerializeField] private Score scoreHandler;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private Text finalScoreDisplay;
     [SerializeField] private GameObject losePanel;
@@ -14,7 +13,7 @@ public class EndGame : MonoBehaviour
     public void OnPlayerWin()
     {
         winPanel.SetActive(true);
-        finalScoreDisplay.text = scoreHandler.totalScore.ToString();
+        finalScoreDisplay.text = Score.totalScore.ToString();
     }
 
     public void OnPlayerLose()
