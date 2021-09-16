@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 0.8007246
+  m_AspectRatio: 0.5641026
 --- !u!114 &180028809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,6 +1302,7 @@ GameObject:
   - component: {fileID: 1799511782}
   - component: {fileID: 1799511783}
   - component: {fileID: 1799511784}
+  - component: {fileID: 1799511785}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1478,6 +1479,18 @@ MonoBehaviour:
   winPanel: {fileID: 84349623}
   finalScoreDisplay: {fileID: 84349622}
   losePanel: {fileID: 1496462197}
+--- !u!114 &1799511785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799511774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4374ee12acd200240a2129ff9a5267ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1840995391 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3363609593755052127, guid: ea43e3a4268cfb24f853eefa0e57bc89, type: 3}
