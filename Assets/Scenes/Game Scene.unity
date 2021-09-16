@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 0.8007246
+  m_AspectRatio: 0.625
 --- !u!114 &180028809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1350,9 +1350,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 154529bf98dd2664483286d426bcae39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelNumber: 1
   mainCam: {fileID: 1447492567}
   goldHandler: {fileID: 1799511775}
   scoreHandler: {fileID: 1799511780}
+  waveDisplay: {fileID: 3363609594368029793}
   boss: {fileID: 835364214}
   greenBoulder: {fileID: 453283252}
   redPage: {fileID: 152779967}
@@ -6557,3 +6559,14 @@ PrefabInstance:
       objectReference: {fileID: 1799511784}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea43e3a4268cfb24f853eefa0e57bc89, type: 3}
+--- !u!114 &3363609594368029793 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1587756247107508726, guid: ea43e3a4268cfb24f853eefa0e57bc89, type: 3}
+  m_PrefabInstance: {fileID: 3363609594368029792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

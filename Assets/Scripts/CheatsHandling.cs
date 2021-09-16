@@ -11,7 +11,7 @@ public class CheatsHandling : MonoBehaviour
 
     public static bool isInvincible = false;
     public static int rateOfFire = 0;
-    public static int bossWaveNumber = 5;
+    public static bool spawnAtBoss = false;
 
     public void InvincibleSwitch()
     {
@@ -27,7 +27,7 @@ public class CheatsHandling : MonoBehaviour
 
     public void BossSwitch()
     {
-        if (startOnBossToggle.isOn) bossWaveNumber = 1;
-        else bossWaveNumber = 5;
+        if (startOnBossToggle.isOn) spawnAtBoss = true;
+        else spawnAtBoss = false;
     }
 }

@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemySpawnBehavior : MonoBehaviour
 {
+    [SerializeField] private int levelNumber = 1;
+
     [SerializeField] private Camera mainCam;
     [SerializeField] private Gold goldHandler;
     [SerializeField] private Score scoreHandler;
+    [SerializeField] private Text waveDisplay;
 
     [SerializeField] private GameObject boss;
     [SerializeField] private GameObject greenBoulder;
@@ -18,10 +22,11 @@ public class EnemySpawnBehavior : MonoBehaviour
     public List<GameObject> enemyList;
     private float timer = 0f;
     
-    private int waveNumber = 1;
-    private int bossWaveNumber = CheatsHandling.bossWaveNumber;
+    private int waveNumber;
+    private int bossWaveNumber = 4;
     private int killCount = 0;
-    private bool waveIsActive = true;
+    private bool waveIsActive = false;
+    private bool waveCleared = true;
     private bool bossMode = false;
 
     private GameObject SpawnEnemy(GameObject templateObject)
@@ -83,15 +88,15 @@ public class EnemySpawnBehavior : MonoBehaviour
                 break;
             case 2:
                 enemy1 = SpawnEnemy(this.redPage);
-                position1 = this.mainCam.ViewportToWorldPoint(new Vector3(0.25f, 1.1f, 10f));
+                position1 = this.mainCam.ViewportToWorldPoint(new Vector3(0.25f, 1.1f, 10.125f));
                 enemy1.transform.position = position1;
 
                 enemy2 = SpawnEnemy(this.redPage);
-                position2 = this.mainCam.ViewportToWorldPoint(new Vector3(0.5f, 1.2f, 10f));
+                position2 = this.mainCam.ViewportToWorldPoint(new Vector3(0.5f, 1.2f, 10.125f));
                 enemy2.transform.position = position2;
 
                 enemy3 = SpawnEnemy(this.redPage);
-                position3 = this.mainCam.ViewportToWorldPoint(new Vector3(0.75f, 1.1f, 10f));
+                position3 = this.mainCam.ViewportToWorldPoint(new Vector3(0.75f, 1.1f, 10.125f));
                 enemy3.transform.position = position3;
 
                 break;
@@ -115,7 +120,10 @@ public class EnemySpawnBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (CheatsHandling.spawnAtBoss) waveNumber = bossWaveNumber - 1;
+        else waveNumber = 0;
+
+        waveDisplay.text = "WAVE " + waveNumber.ToString() + " / " + bossWaveNumber.ToString();
     }
 
     // Update is called once per frame
@@ -128,7 +136,6 @@ public class EnemySpawnBehavior : MonoBehaviour
             if (this.waveNumber == this.bossWaveNumber)
             {
                 this.boss.SetActive(true);
-                // this.boss.transform.position = this.mainCam.ViewportToWorldPoint(new Vector3(0.5f, 1.1f, 10f));
                 this.bossMode = true;
             }
 
@@ -136,7 +143,6 @@ public class EnemySpawnBehavior : MonoBehaviour
             {
                 if (this.timer >= this.waveLength)
                 {
-                    this.timer = 0f;
                     this.waveIsActive = false;
                 }
 
@@ -150,18 +156,32 @@ public class EnemySpawnBehavior : MonoBehaviour
 
         else
         {
-            if(this.killCount >= 8)
+            if (!waveCleared)
             {
-                this.scoreHandler.AddScore(400);
-                this.goldHandler.GainGold(20);
+                if (enemyList.Count == 0)
+                {
+                    waveCleared = true;
+                    timer = 0f;
+
+                    if (this.killCount >= 8)
+                    {
+                        this.scoreHandler.AddScore(400);
+                        this.goldHandler.GainGold(20);
+                    }
+                }
             }
 
-            if(this.timer >= this.waveInterval)
+            else
             {
-                this.timer = 0f;
-                this.killCount = 0;
-                this.waveNumber += 1;
-                this.waveIsActive = true;
+                if (this.timer >= this.waveInterval)
+                {
+                    this.timer = 0f;
+                    this.killCount = 0;
+                    this.waveNumber += 1;
+                    waveDisplay.text = "WAVE " + waveNumber.ToString() + " / " + bossWaveNumber.ToString();
+                    this.waveIsActive = true;
+                    waveCleared = false;
+                }
             }
         }
     }
