@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class UpgradeHandling : MonoBehaviour
 {
+    [SerializeField] private GameObject upgradePanel;
+    [SerializeField] private Button upgradeButton;
+
     [SerializeField] private AutoFire firingRateHandler;
     [SerializeField] private PlayerHealth healthHandler;
     [SerializeField] private Gold goldHandler;
@@ -13,6 +16,18 @@ public class UpgradeHandling : MonoBehaviour
     private int upgradeCountFR = CheatsHandling.rateOfFire;
     private float timer = 0f;
     private bool messageIsUp = false;
+
+    public void OpenUpgradeMenu()
+    {
+        upgradePanel.SetActive(true);
+        upgradeButton.gameObject.SetActive(false);
+    }
+
+    public void CloseUpgradeMenu()
+    {
+        upgradePanel.SetActive(false);
+        upgradeButton.gameObject.SetActive(true);
+    }
 
     public void UpgradeFiringRate()
     {
@@ -61,6 +76,7 @@ public class UpgradeHandling : MonoBehaviour
             {
                 maxMessage.gameObject.SetActive(false);
                 messageIsUp = false;
+                timer = 0.0f;
             }
         }
     }

@@ -44,6 +44,7 @@ public class Gold : MonoBehaviour
             {
                 brokeMessage.gameObject.SetActive(false);
                 messageIsUp = false;
+                timer = 0.0f;
             }
         }
     }
