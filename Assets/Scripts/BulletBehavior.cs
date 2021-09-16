@@ -9,7 +9,7 @@ public class BulletBehavior : MonoBehaviour
     [SerializeField] private AutoFire autoFire;
 
     private float y;
-    private float life = 0f;
+    private int life = 5;
 
     IEnumerator RemoveAfterSeconds(int seconds)
     {
@@ -24,7 +24,7 @@ public class BulletBehavior : MonoBehaviour
     void Start()
     {
         y = this.transform.position.y;
-        StartCoroutine(RemoveAfterSeconds(5));
+        StartCoroutine(RemoveAfterSeconds(life));
     }
 
     // Update is called once per frame
