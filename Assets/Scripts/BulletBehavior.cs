@@ -14,7 +14,10 @@ public class BulletBehavior : MonoBehaviour
     IEnumerator RemoveAfterSeconds(int seconds)
     {
         yield return new WaitForSeconds(seconds);
-        autoFire.DespawnBullet(this.gameObject);
+        if (this.gameObject == null)
+        {
+            autoFire.DespawnBullet(this.gameObject);
+        }
     }
 
     // Start is called before the first frame update
