@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 0.5626822
+  m_AspectRatio: 0.5625
 --- !u!114 &180028809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6772,10 +6772,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1799511781}
+    - target: {fileID: 3783704868049851316, guid: ea43e3a4268cfb24f853eefa0e57bc89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027616849777615155, guid: ea43e3a4268cfb24f853eefa0e57bc89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4027616850338639782, guid: ea43e3a4268cfb24f853eefa0e57bc89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1799511784}
+    - target: {fileID: 4027616850338639782, guid: ea43e3a4268cfb24f853eefa0e57bc89, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027616850498214584, guid: ea43e3a4268cfb24f853eefa0e57bc89, type: 3}
+      propertyPath: m_Text
+      value: To Next Level
+      objectReference: {fileID: 0}
     - target: {fileID: 6316748205781085644, guid: ea43e3a4268cfb24f853eefa0e57bc89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

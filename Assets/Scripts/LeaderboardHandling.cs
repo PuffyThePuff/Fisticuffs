@@ -63,8 +63,7 @@ public class LeaderboardHandling : MonoBehaviour
 
     public void SubmitScore()
     {
-        // StartCoroutine(PostScore(UserProfileHandling.currentNickname));
-        StartCoroutine(PostScore("DCS"));
+        StartCoroutine(PostScore(UserProfileHandling.currentNickname));
     }
 
     public void ViewLeaderboard()

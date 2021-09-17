@@ -31,8 +31,8 @@ public class UserProfileHandling : MonoBehaviour
     [SerializeField] private Text emailDisplay;
     [SerializeField] private Text contactDisplay;
 
-    public static string currentName;
-    public static string currentNickname;
+    public static string currentName = "Guest User";
+    public static string currentNickname = "Guest";
     public static string currentEmail;
     public static string currentContact;
 

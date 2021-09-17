@@ -19,11 +19,6 @@ public class EndGame : MonoBehaviour
 
     public void OnPlayerWin()
     {
-        winPanel.SetActive(true);
-    }
-
-    public void OnFinalWin()
-    {
         if (Application.internetReachability != NetworkReachability.NotReachable)
         {
             leaderboardHandler.SubmitScore();
@@ -34,7 +29,7 @@ public class EndGame : MonoBehaviour
         }
 
         winPanel.SetActive(true);
-        finalScoreDisplay1.text = "SCORE: " + Score.totalScore.ToString();
+        if (finalScoreDisplay1.gameObject.activeSelf) finalScoreDisplay1.text = "SCORE: " + Score.totalScore.ToString();
     }
 
     public void OnPlayerLose()
