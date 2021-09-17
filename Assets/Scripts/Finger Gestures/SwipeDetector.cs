@@ -12,12 +12,12 @@ public class SwipeDetector : MonoBehaviour
 
     private void Update()
     {
+        //yes this makes it false every frame
+        tap = swipeUp = swipeDown = swipeLeft = swipeRight = false;
+
         //check if finger is not on joystick to detect swipes
         if (!joystick.fingerOnJoystick)
         {
-            //yes this makes it false every frame
-            tap = swipeUp = swipeDown = swipeLeft = swipeRight = false;
-
             //for testing
             if (Input.GetMouseButtonDown(0))
             {
@@ -89,6 +89,7 @@ public class SwipeDetector : MonoBehaviour
                     }
                     else
                     {
+                        GameEvents.current.SwipeUp();
                         swipeUp = true;
                     }
                 }
