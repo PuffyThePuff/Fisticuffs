@@ -8,23 +8,29 @@ public class PlayerBomb : MonoBehaviour
     [SerializeField] private Gold goldHandler;
     [SerializeField] private Score scoreHandler;
 
+    private int counter = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         GameEvents.current.onSwipeUp += Explode;
+        GameEvents.current.onBuyBomb += BuyBomb;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void BuyBomb()
     {
-        
+        counter++;
     }
 
     private void Explode()
     {
-        this.GetComponent<MeshRenderer>().enabled = true;
-        this.GetComponent<CapsuleCollider>().enabled = true;
-        this.GetComponent<Animator>().enabled = true;
+        if (counter > 0)
+        {
+            counter--;
+            this.GetComponent<MeshRenderer>().enabled = true;
+            this.GetComponent<CapsuleCollider>().enabled = true;
+            this.GetComponent<Animator>().enabled = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

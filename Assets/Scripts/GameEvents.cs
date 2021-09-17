@@ -18,10 +18,10 @@ public class GameEvents : MonoBehaviour
         onShipDeath?.Invoke(shipPosition);
     }
 
-    public event Action onSpendMoney;
-    public void SpendMoney()
+    public event Action onBuyBomb;
+    public void BuyBomb()
     {
-        onSpendMoney?.Invoke();
+        onBuyBomb?.Invoke();
     }
 
     public event Action onSwipeUp;
