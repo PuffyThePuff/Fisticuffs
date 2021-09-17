@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 2002498286646096849}
   m_Layer: 0
   m_Name: Green Boulder Meteor
-  m_TagString: EnemyShip
+  m_TagString: EnemyBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
