@@ -41,6 +41,8 @@ public class PlayerBomb : MonoBehaviour
 
     public void DestroyThis()
     {
-        Destroy(this.gameObject);
+        this.GetComponent<MeshRenderer>().enabled = false;
+        this.GetComponent<CapsuleCollider>().enabled = false;
+        this.GetComponent<Animator>().enabled = false;
     }
 }
