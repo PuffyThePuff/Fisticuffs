@@ -1,0 +1,219 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3087138421289916041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3087138421289916087}
+  - component: {fileID: 3087138421289916086}
+  - component: {fileID: 3087138421289916085}
+  - component: {fileID: 3087138421289916084}
+  - component: {fileID: 3087138421289916082}
+  - component: {fileID: 3087138421289916083}
+  - component: {fileID: 3087138421289916040}
+  - component: {fileID: 3087138421289916081}
+  - component: {fileID: 3087138421289916080}
+  - component: {fileID: 3087138421289916095}
+  - component: {fileID: 3087138421289916094}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3087138421289916087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087138421289916041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3087138421289916086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087138421289916041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154529bf98dd2664483286d426bcae39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelNumber: 1
+  mainCam: {fileID: 0}
+  goldHandler: {fileID: 3087138421289916040}
+  scoreHandler: {fileID: 3087138421289916083}
+  waveDisplay: {fileID: 0}
+  boss: {fileID: 0}
+  greenBoulder: {fileID: 0}
+  redPage: {fileID: 0}
+  blueBlade: {fileID: 0}
+  waveLength: 25
+  waveInterval: 5
+  enemyList: []
+--- !u!114 &3087138421289916085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087138421289916041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9abaca9b31a119e4294c47409ac99803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endgameHandler: {fileID: 3087138421289916095}
+  healthBar: {fileID: 0}
+  healthAmount: 3
+  healthMax: 3
+--- !u!114 &3087138421289916084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087138421289916041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b42d7dd4826e3b439759280380029e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrel: {fileID: 0}
+  bulletTemplate: {fileID: 0}
+  weaponSwitch: {fileID: 0}
+  bulletPool: []
+  fireRate: 1
+--- !u!114 &3087138421289916082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087138421289916041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce89547842b6f8469739110131d6c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradePanel: {fileID: 0}
+  upgradeButton: {fileID: 0}
+  firingRateHandler: {fileID: 3087138421289916084}
+  healthHandler: {fileID: 3087138421289916085}
+  goldHandler: {fileID: 3087138421289916040}
+  maxMessage: {fileID: 0}
+--- !u!114 &3087138421289916083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087138421289916041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e07c33c064ac645887c9dec8fa2c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 0}
+--- !u!114 &3087138421289916040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087138421289916041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a9f9fddb2d2fd4b9558fe5afe09ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  display: {fileID: 0}
+  brokeMessage: {fileID: 0}
+  totalGold: 0
+--- !u!114 &3087138421289916081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087138421289916041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d483819d2333794d9cde2eda1437211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endgameHandler: {fileID: 3087138421289916095}
+  healthBar: {fileID: 0}
+  healthAmount: 10
+  healthMax: 10
+--- !u!114 &3087138421289916080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087138421289916041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bdd302cf39dc54bbf29ea9daca6ef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swipeLeft: 0
+  swipeRight: 0
+  tap: 0
+  swipeUp: 0
+  swipeDown: 0
+  isDragging: 0
+  startTouch: {x: 0, y: 0}
+  swipeDelta: {x: 0, y: 0}
+  joystick: {fileID: 0}
+--- !u!114 &3087138421289916095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087138421289916041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b884dc661dea4147834f83c98af3bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leaderboardHandler: {fileID: 3087138421289916094}
+  winPanel: {fileID: 0}
+  finalScoreDisplay1: {fileID: 0}
+  viewLeaderboardButton1: {fileID: 0}
+  losePanel: {fileID: 0}
+  finalScoreDisplay2: {fileID: 0}
+  viewLeaderboardButton2: {fileID: 0}
+--- !u!114 &3087138421289916094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087138421289916041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa5344a0003c52448cbab6e2b6fc81b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leaderboardPanel: {fileID: 0}
+  scoreDisplayList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
