@@ -434,6 +434,7 @@ GameObject:
   - component: {fileID: 6705619600196096334}
   - component: {fileID: 5596671870830524319}
   - component: {fileID: 2686060817755632722}
+  - component: {fileID: 1540062935668368598}
   m_Layer: 5
   m_Name: Bomb Display
   m_TagString: Untagged
@@ -502,6 +503,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
+--- !u!114 &1540062935668368598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979704514628141184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb103dec49330e342b151bd504d47c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3363609592880356254
 GameObject:
   m_ObjectHideFlags: 0
