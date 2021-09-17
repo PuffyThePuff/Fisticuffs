@@ -8,19 +8,19 @@ using UnityEngine.UI;
 
 public class LeaderboardHandling : MonoBehaviour
 {
-    [SerializeField] private GameObject offlinePanel;
-    [SerializeField] private GameObject onlinePanel;
+    [SerializeField] private GameObject leaderboardPanel;
+    [SerializeField] private Text[] scoreDisplayList;
 
     public string BaseURL
     {
         get { return "https://my-user-scoreboard.herokuapp.com/api/"; }
     }
 
-    public IEnumerator PostScore()
+    public IEnumerator PostScore(string username)
     {
         Dictionary<string, string> playerParameters = new Dictionary<string, string>();
         playerParameters.Add("group_num", "9");
-        playerParameters.Add("user_name", "DCS");
+        playerParameters.Add("user_name", username);
         playerParameters.Add("score", Score.totalScore.ToString());
         string requestString = JsonConvert.SerializeObject(playerParameters);
         byte[] requestData = new UTF8Encoding().GetBytes(requestString);
@@ -50,7 +50,26 @@ public class LeaderboardHandling : MonoBehaviour
         if (string.IsNullOrEmpty(req.error))
         {
             List<Dictionary<string, string>> playerList = JsonConvert.DeserializeObject<List<Dictionary<string, string>>>(req.downloadHandler.text);
+
+            for (int i = 0; i < 3; i++)
+            {
+                scoreDisplayList[i].text = playerList[i]["user_name"] + " - " + playerList[i]["score"];
+            }
+
+            scoreDisplayList[3].text = "DCS" + " - " + Score.totalScore.ToString();
         }
         else Debug.LogError($"Error: {req.error}");
+    }
+
+    public void SubmitScore()
+    {
+        // StartCoroutine(PostScore(UserProfileHandling.currentNickname));
+        StartCoroutine(PostScore("DCS"));
+    }
+
+    public void ViewLeaderboard()
+    {
+        StartCoroutine(GetScores());
+        leaderboardPanel.SetActive(true);
     }
 }

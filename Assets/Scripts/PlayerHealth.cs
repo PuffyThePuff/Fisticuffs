@@ -9,12 +9,14 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Image healthBar;
     public float healthAmount = 3;
     public float healthMax = 3;
+    private bool hasDied = false;
 
     private void Update()
     {
-        if (healthAmount <= 0)
+        if (!hasDied && healthAmount <= 0)
         {
             endgameHandler.OnPlayerLose();
+            hasDied = true;
         }
     }
 

@@ -88,15 +88,15 @@ public class EnemySpawnBehavior : MonoBehaviour
                 break;
             case 2:
                 enemy1 = SpawnEnemy(this.redPage);
-                position1 = this.mainCam.ViewportToWorldPoint(new Vector3(0.25f, 1.1f, 10.125f));
+                position1 = this.mainCam.ViewportToWorldPoint(new Vector3(0.25f, 1.1f, 10f));
                 enemy1.transform.position = position1;
 
                 enemy2 = SpawnEnemy(this.redPage);
-                position2 = this.mainCam.ViewportToWorldPoint(new Vector3(0.5f, 1.2f, 10.125f));
+                position2 = this.mainCam.ViewportToWorldPoint(new Vector3(0.5f, 1.2f, 10f));
                 enemy2.transform.position = position2;
 
                 enemy3 = SpawnEnemy(this.redPage);
-                position3 = this.mainCam.ViewportToWorldPoint(new Vector3(0.75f, 1.1f, 10.125f));
+                position3 = this.mainCam.ViewportToWorldPoint(new Vector3(0.75f, 1.1f, 10f));
                 enemy3.transform.position = position3;
 
                 break;
