@@ -14,6 +14,7 @@ public class EnemyCollisionDetection : MonoBehaviour
         if (other.tag == diesToTag)
         {
             SoundManager.PlaySound("shipDeath");
+            GameEvents.current.ShipDeath(this.transform.position);
             spawnBehavior.DespawnEnemy(this.gameObject);
             goldHandler.GainGold(5);
             scoreHandler.AddScore(100);
