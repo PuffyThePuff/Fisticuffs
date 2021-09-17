@@ -535,7 +535,7 @@ PrefabInstance:
     - target: {fileID: 2002498286646096849, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: weaponSwitch
       value: 
-      objectReference: {fileID: 1267899898}
+      objectReference: {fileID: 0}
     - target: {fileID: 2002498286646096849, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: bulletTemplate
       value: 
