@@ -46,6 +46,7 @@ public class AutoFire : MonoBehaviour
         if (this.timer >= this.fireRate)
         {
             this.timer = 0f;
+            SoundManager.PlaySound("playerFire");
             SpawnBullet(bulletTemplate, pos);
         }
         if (weaponSwitch.weaponType == 0)
