@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 0.5625
+  m_AspectRatio: 0.5626822
 --- !u!114 &180028809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,6 +724,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 453283253, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 416836244495986366, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -762,7 +766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004343996415475075, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4004343996415475075, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -774,19 +778,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004343996415475075, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 4004343996415475075, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4004343996415475075, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4004343996415475075, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 4004343996415475075, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -798,11 +802,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004343996415475075, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 7520149314570217379, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 46b4a08ca5a50d04ea53adb56a96dc6c, type: 2}
     - target: {fileID: 7832773627517682542, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_Name
-      value: Great Verdant Asteroid
+      value: Boss Plane
       objectReference: {fileID: 0}
     - target: {fileID: 7832773627517682542, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_IsActive
@@ -812,6 +820,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EnemyBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 7899393355956917173, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 172ac7bb9c609e94b9015b4691cf28d6, type: 2}
     m_RemovedComponents:
     - {fileID: 2200690491402732974, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
@@ -833,6 +845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthHandler: {fileID: 1799511782}
+  weakToTag: BulletRock
 --- !u!114 &835364216
 MonoBehaviour:
   m_ObjectHideFlags: 0
