@@ -7,7 +7,7 @@ public class PlayerBulletCollision : MonoBehaviour
     [SerializeField] private AutoFire autoFire;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "EnemyShip")
+        if (other.tag == "EnemyShip" || other.CompareTag("EnemyBoss"))
         {
             autoFire.DespawnBullet(this.gameObject);
         }
