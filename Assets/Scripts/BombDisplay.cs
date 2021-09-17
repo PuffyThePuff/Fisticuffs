@@ -19,6 +19,7 @@ public class BombDisplay : MonoBehaviour
     private void BombUsed()
     {
         counter--;
+        if (counter < 0) { counter = 0; }
         text.text = counter.ToString();
     }
 
