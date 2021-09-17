@@ -30,4 +30,9 @@ public class CheatsHandling : MonoBehaviour
         if (startOnBossToggle.isOn) spawnAtBoss = true;
         else spawnAtBoss = false;
     }
+
+    public void SetStartLevel(int level)
+    {
+        MenuHandling.levelNumber = level;
+    }
 }
