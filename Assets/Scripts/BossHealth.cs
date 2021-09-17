@@ -9,13 +9,15 @@ public class BossHealth : MonoBehaviour
     [SerializeField] public Image healthBar;
     public float healthAmount = 10f;
     public float healthMax = 10f;
+    private bool hasDied = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (healthAmount <= 0)
+        if (!hasDied && healthAmount <= 0)
         {
             endgameHandler.OnPlayerWin();
+            hasDied = true;
         }
     }
 
