@@ -59,7 +59,7 @@ public class AutoFire : MonoBehaviour
         }
         if (weaponSwitch.weaponType == 2)
         {
-            bulletTemplate.tag = "BulletPaper";
+            bulletTemplate.tag = "BulletScissor";
         }
     }
 }
