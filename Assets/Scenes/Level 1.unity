@@ -784,7 +784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7832773627517682542, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
       propertyPath: m_TagString
-      value: EnemyShip
+      value: EnemyBoss
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2200690491402732974, guid: 2e14d1ebb094c6e46b68bd441519fc4f, type: 3}
@@ -807,6 +807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthHandler: {fileID: 1799511782}
+  weakToTag: BulletPaper
 --- !u!114 &835364216
 MonoBehaviour:
   m_ObjectHideFlags: 0

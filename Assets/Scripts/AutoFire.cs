@@ -52,14 +52,17 @@ public class AutoFire : MonoBehaviour
         if (weaponSwitch.weaponType == 0)
         {
             bulletTemplate.tag = "BulletPaper";
+            bulletTemplate.GetComponent<Material>().color = Color.red;
         }
         if (weaponSwitch.weaponType == 1)
         {
             bulletTemplate.tag = "BulletRock";
+            bulletTemplate.GetComponent<Material>().color = Color.green;
         }
         if (weaponSwitch.weaponType == 2)
         {
             bulletTemplate.tag = "BulletScissor";
+            bulletTemplate.GetComponent<Material>().color = Color.blue;
         }
     }
 }
