@@ -6,23 +6,17 @@ using UnityEngine.SceneManagement;
 public class MenuHandling : MonoBehaviour
 {
     [SerializeField] public GameObject titleScreen;
-    [SerializeField] public GameObject mainMenu;
     [SerializeField] public GameObject optionsMenu;
     [SerializeField] public GameObject profileMenu;
 
     [SerializeField] private GameObject offlinePanel;
 
-    public void OpenMainMenu()
-    {
-        this.mainMenu.SetActive(true);
-        this.titleScreen.SetActive(false);
-        this.optionsMenu.SetActive(false);
-    }
+    public static int levelNumber = 1;
 
     public void OpenOptionsMenu()
     {
         this.optionsMenu.SetActive(true);
-        this.mainMenu.SetActive(false);
+        this.titleScreen.SetActive(false);
     }
 
     public void OpenProfileMenu()
@@ -42,7 +36,7 @@ public class MenuHandling : MonoBehaviour
     public void ReturnToTitleScreen()
     {
         this.titleScreen.SetActive(true);
-        this.mainMenu.SetActive(false);
+        this.optionsMenu.SetActive(false);
     }
 
     public void CloseOfflinePopup()
@@ -62,8 +56,8 @@ public class MenuHandling : MonoBehaviour
         Application.Quit();
     }
 
-    public void OpenScene(string sceneName)
+    public void OpenScene()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("Level " + levelNumber.ToString());
     }
 }
