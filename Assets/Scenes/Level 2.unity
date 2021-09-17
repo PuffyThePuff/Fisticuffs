@@ -1296,7 +1296,7 @@ MonoBehaviour:
   goldHandler: {fileID: 1799511775}
   scoreHandler: {fileID: 1799511780}
   waveDisplay: {fileID: 411993478}
-  boss: {fileID: 0}
+  boss: {fileID: 1812198189}
   greenBoulder: {fileID: 453283252}
   redPage: {fileID: 152779967}
   blueBlade: {fileID: 261604279}
