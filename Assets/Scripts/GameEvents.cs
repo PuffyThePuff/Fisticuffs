@@ -15,18 +15,18 @@ public class GameEvents : MonoBehaviour
     public event Action<Vector3> onShipDeath;
     public void ShipDeath(Vector3 shipPosition)
     {
-        if (onShipDeath != null)
-        {
-            onShipDeath(shipPosition);
-        }
+        onShipDeath?.Invoke(shipPosition);
     }
 
     public event Action onSpendMoney;
     public void SpendMoney()
     {
-        if (onSpendMoney != null)
-        {
-            onSpendMoney();
-        }
+        onSpendMoney?.Invoke();
+    }
+
+    public event Action onSwipeUp;
+    public void SwipeUp()
+    {
+        onSwipeUp?.Invoke();
     }
 }
