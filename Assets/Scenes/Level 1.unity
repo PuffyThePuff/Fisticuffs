@@ -2168,6 +2168,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6167899725646307067, guid: 099564e2641589e46a130edaaa71c925, type: 3}
+      propertyPath: m_AspectRatio
+      value: 0.5626822
+      objectReference: {fileID: 0}
     - target: {fileID: 6167899726320611546, guid: 099564e2641589e46a130edaaa71c925, type: 3}
       propertyPath: m_Name
       value: Level Background Canvas
@@ -2260,5 +2264,9 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1447492567}
+    - target: {fileID: 6167899726811951293, guid: 099564e2641589e46a130edaaa71c925, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 400
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 099564e2641589e46a130edaaa71c925, type: 3}
