@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossCollisionDetection : MonoBehaviour
 {
     [SerializeField] BossHealth healthHandler;
+    [SerializeField] private string weakToTag;
     private bool isVulnerable = false;
 
     public void StartFight()
@@ -15,7 +16,7 @@ public class BossCollisionDetection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isVulnerable && other.tag == "PlayerBullet")
+        if (isVulnerable && other.tag == weakToTag)
         {
             healthHandler.TakeDamage(1);
         }
