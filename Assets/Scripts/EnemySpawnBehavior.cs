@@ -72,7 +72,6 @@ public class EnemySpawnBehavior : MonoBehaviour
         switch (spawnIndex)
         {
             case 0:
-            case 1:
                 enemy1 = SpawnEnemy(this.greenBoulder);
                 position1 = this.mainCam.ViewportToWorldPoint(new Vector3(0.25f, 1.1f, 10f));
                 enemy1.transform.position = position1;
@@ -86,7 +85,7 @@ public class EnemySpawnBehavior : MonoBehaviour
                 enemy3.transform.position = position3;
 
                 break;
-            case 2:
+            case 1:
                 enemy1 = SpawnEnemy(this.redPage);
                 position1 = this.mainCam.ViewportToWorldPoint(new Vector3(0.25f, 1.1f, 10f));
                 enemy1.transform.position = position1;
@@ -100,7 +99,7 @@ public class EnemySpawnBehavior : MonoBehaviour
                 enemy3.transform.position = position3;
 
                 break;
-            case 3:
+            case 2:
                 enemy1 = SpawnEnemy(this.blueBlade);
                 position1 = this.mainCam.ViewportToWorldPoint(new Vector3(0.25f, 1.1f, 10f));
                 enemy1.transform.position = position1;
@@ -148,7 +147,7 @@ public class EnemySpawnBehavior : MonoBehaviour
 
                 if (this.enemyList.Count == 0)
                 {
-                    int spawnIndex = Random.Range(0, 4);
+                    int spawnIndex = Random.Range(0, 3);
                     this.SpawnFleet(spawnIndex);
                 }
             }
