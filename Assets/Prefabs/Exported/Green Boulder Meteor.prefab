@@ -45,13 +45,14 @@ GameObject:
   - component: {fileID: 637729770044071572}
   - component: {fileID: 2200690491402732974}
   - component: {fileID: 2002498286646096849}
+  - component: {fileID: 453283253}
   m_Layer: 0
   m_Name: Green Boulder Meteor
-  m_TagString: EnemyBoss
+  m_TagString: EnemyShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4004343996415475075
 Transform:
   m_ObjectHideFlags: 0
@@ -59,7 +60,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7832773627517682542}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -125,10 +126,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7832773627517682542}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: d81414c6c748d8c4799ae479b92ef496, type: 2}
 --- !u!54 &637729770044071572
@@ -176,10 +177,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barrel: {fileID: 3817303649887880119}
-  bulletTemplate: {fileID: 3625910968263281632}
+  bulletTemplate: {fileID: 0}
   weaponSwitch: {fileID: 0}
   bulletPool: []
   fireRate: 3
+--- !u!114 &453283253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7832773627517682542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b53a06e03e3e24b9ebd684a7de88bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  mainCam: {fileID: 0}
 --- !u!1001 &4613429563156561562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -249,11 +264,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cca0666add476947a40bb27bacbb577, type: 3}
---- !u!1 &3625910968263281632 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8239304105801938298, guid: 9cca0666add476947a40bb27bacbb577, type: 3}
-  m_PrefabInstance: {fileID: 4613429563156561562}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &203819404808898139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4814960522276124865, guid: 9cca0666add476947a40bb27bacbb577, type: 3}
